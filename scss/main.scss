@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+  cursor: context-menu;
+}
+
+@import "./base/variable";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+h2 {
+  color: $textHeading;
+}
+p {
+  color: $colorPTag;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+@media only screen and (min-width: 1200px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  body {
+    font-size: 9px;
+  }
+}
+
+@import "./base/keyframe";
+@import "./layouts/header";
+@import "./components/getStarted";
+@import "./components/globalAccelerator";
+@import "./components/bestExperience";
+@import "./components/viewWork";
+@import "./components/worldPotential";
+@import "./components/designDevelop";
+@import "./components/letTalk";
+@import "./components/aboutUs";
+@import "./components/news";
+@import "./layouts/footer";

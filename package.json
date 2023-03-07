@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "sass": "^1.58.3"
+  },
+  "name": "pollock",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx sass --watch scss/main.scss build/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

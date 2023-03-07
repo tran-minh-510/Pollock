@@ -1,0 +1,127 @@
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 500;
+  background-color: $colorWhite;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 0;
+    .header_icon-menu {
+      display: none;
+      i {
+        font-size: 2.5em;
+      }
+    }
+    .header_logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      font-size: 1em;
+      @media only screen and (min-width: 576px) and (max-width: 992px) {
+        h3 {
+          font-size: 3em;
+        }
+      }
+      @media only screen and (max-width: 576px) {
+        gap: 0.8em;
+        h3 {
+          font-size: 2.5em;
+        }
+      }
+    }
+    .header_menu {
+      i {
+        display: none;
+        @media only screen and (max-width: 992px) {
+          font-size: 3em !important;
+        }
+      }
+      ul {
+        li {
+          list-style: none;
+          display: inline-block;
+          padding: 1em;
+          text-transform: uppercase;
+          font-size: 1em;
+          @media only screen and (max-width: 992px) {
+            font-size: 1.7em !important;
+          }
+          @media screen and (min-width: 992px) {
+            &:hover {
+              color: $colorGlobal;
+            }
+          }
+        }
+      }
+    }
+    .header_options {
+      img {
+        margin-right: 1em;
+        cursor: pointer;
+      }
+      button {
+        background-color: $colorGlobal;
+        text-transform: uppercase;
+        padding: 0.5em 1.2em;
+        &:hover {
+          background-color: $colorWhite;
+          color: $colorGlobal;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    position: relative;
+    .header {
+      padding: 2em 0;
+      @media screen and (max-width: 576px) {
+        padding: 1em 0;
+      }
+      .header_icon-menu {
+        display: block !important;
+        color: $colorGlobal;
+      }
+      .header_menu {
+        display: none;
+        position: absolute;
+        left: 0;
+        background-color: $colorGlobal;
+        color: $colorWhite;
+        border-radius: 0 1em 1em 0;
+        padding: 1em 1em;
+        right: 50vw;
+        transition: all 0.5s ease-in;
+        i {
+          display: block;
+          font-size: 1.8em;
+          float: right;
+        }
+        ul {
+          li {
+            display: block;
+
+            &:not(:last-child) {
+              border-bottom: 1px solid $colorWhite;
+            }
+          }
+        }
+      }
+      .header_options {
+        img {
+          display: none;
+        }
+        button {
+          font-size: 1.3em;
+        }
+      }
+    }
+  }
+}

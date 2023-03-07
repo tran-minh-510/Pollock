@@ -1,0 +1,80 @@
+.let-talk {
+  padding: 6em 0;
+  @media only screen and (max-width: 992px) {
+    padding: 3em 0;
+  }
+  background-color: #f8fafc;
+  .let-talk_detail {
+    @media only screen and (min-width: 992px) {
+      margin-top: 2em;
+    }
+    h2 {
+      font-size: 2.1em;
+    }
+    p {
+      font-size: 0.9em;
+      padding: 1em 0;
+      span {
+        color: $colorGlobal;
+      }
+    }
+    button {
+      background-color: $colorGlobal;
+      color: $colorWhite;
+      text-transform: uppercase;
+      font-size: 0.75em;
+      padding: 0.8em 1.5em;
+      margin-top: 1.5em;
+      i {
+        padding-left: 0.5em;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+      }
+      &:hover {
+        background-color: $colorWhite;
+        color: $colorGlobal;
+        i {
+          padding-left: 0.8em;
+        }
+      }
+    }
+  }
+  .let-talk_detail-box {
+    .let-talk_detail-box_one {
+      padding-bottom: 1em;
+      border-bottom: 1px solid $colorGlobal;
+      .let-talk_detail-box_one_question {
+        display: flex;
+        justify-content: space-between;
+        h5 {
+          font-size: 1.2em;
+        }
+        i {
+          color: $colorGlobal;
+          font-size: 1.5em;
+        }
+      }
+      p {
+        margin-top: 1em;
+        font-size: 0.9em;
+      }
+    }
+    .let-talk_detail-box_list {
+      padding-top: 1em;
+      .let-talk_detail-box_list-detail {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.2em 0;
+        border-bottom: 1px solid #e7e5ea;
+        h5 {
+          font-size: 1.1em;
+        }
+        i {
+          font-size: 1em;
+          font-weight: 100;
+          color: #7b88a8;
+        }
+      }
+    }
+  }
+}

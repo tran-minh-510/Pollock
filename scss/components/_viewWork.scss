@@ -1,0 +1,74 @@
+.view-work {
+  height: 65em;
+  overflow: hidden;
+  position: relative;
+  @media only screen and (max-width: 992px) {
+    height: 120em;
+    h3 {
+      font-size: 2.5em !important;
+    }
+    p {
+      font-size: 1.6em;
+    }
+    button {
+      font-size: 1.6em;
+    }
+  }
+  .view-work-background {
+    position: absolute;
+    background-color: #2b303e;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  .view-work-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media only screen and (max-width: 992px) {
+      width: 94%;
+      text-align: center;
+    }
+    .view-work-content_title {
+      h3 {
+        color: $colorWhite;
+        font-size: 1.8em;
+      }
+    }
+    .view-work-content_title-img {
+      margin-top: 3em;
+    }
+    .view-work-content_text-img {
+      margin-top: 3em;
+      @media only screen and (min-width: 992px) {
+        .img-last {
+          margin-top: 1.7em;
+        }
+      }
+    }
+    .view-work-content_text {
+      p {
+        color: $colorWhite;
+      }
+      font-weight: 300;
+      font-size: 1em;
+      padding-top: 0.8em;
+    }
+    button {
+      padding: 0.7em 1.5em;
+      background-color: $colorGlobal;
+      margin-top: 4em;
+      @media only screen and (max-width: 992px) {
+        font-size: 1.3em;
+      }
+      &:hover {
+        background-color: $colorWhite;
+        color: $colorGlobal;
+      }
+    }
+  }
+}

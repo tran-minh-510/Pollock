@@ -1,0 +1,34 @@
+.world-potential {
+  padding: 5em 0;
+  text-align: center;
+  .world-potential-title {
+    h2 {
+      font-size: 3em;
+      span {
+        background: linear-gradient(to right, #ffc0ec, #857fff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    p {
+      font-weight: 300;
+      margin-top: 0.3em;
+    }
+  }
+  .world-potential-content {
+    margin-top: 3.5em;
+    .world-potential-content_box {
+      padding: 3em 0;
+      border: 1px solid #617798;
+      border-radius: 1em;
+      h4 {
+        margin: 1em 0;
+        font-size: 1.3em;
+      }
+      p {
+        font-size: 1em;
+        font-weight: 300;
+      }
+    }
+  }
+}

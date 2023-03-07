@@ -1,0 +1,51 @@
+.design-develop {
+  height: 27.6em;
+  position: relative;
+  text-align: center;
+  .design-develop-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    img {
+      height: 100%;
+    }
+  }
+  .design-develop-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    .design-develop-content_title {
+      margin-top: 3em;
+      h2 {
+        font-size: 2.5em;
+        color: $borderLine;
+        span {
+          background: linear-gradient(to right, #ffc0ec, #857fff);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+  }
+  p {
+    padding: 1em 0;
+    font-weight: 300;
+    color: $borderLine;
+  }
+  button {
+    margin-top: 2.5em;
+    background-color: $colorGlobal;
+    padding: 0.7em 1.5em;
+    font-size: 1em;
+    &:hover {
+      background-color: $colorWhite;
+      color: $colorGlobal;
+    }
+  }
+}

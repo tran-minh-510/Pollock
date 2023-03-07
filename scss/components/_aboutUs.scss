@@ -1,0 +1,93 @@
+.about-us {
+  padding: 5em 0;
+  h2 {
+    text-align: center;
+    font-size: 2.5em;
+  }
+  .about-us_designer {
+    @media only screen and (max-width: 992px) {
+      padding: 3em 0;
+    }
+    @media only screen and (min-width: 992px) {
+      padding: 3em 4em;
+    }
+    .about-us_designer-detail {
+      text-align: center;
+      box-shadow: 0px 20px 50px rgba(79, 119, 255, 0.2);
+      border-radius: 1.2em;
+      padding: 0 2em;
+      .about-us_designer-detail_comments {
+        padding: 2em 0 1.3em 0;
+        border-bottom: 1px solid #e7e5ea;
+        .about-us_designer-detail_comments-text {
+          margin-top: 1em;
+          p {
+            font-size: 0.9em;
+          }
+        }
+      }
+      .about-us_designer-detail_info {
+        padding: 1em 0 1.5em 0;
+        h4 {
+          font-size: 1.2em;
+        }
+        p {
+          font-size: 0.9em;
+        }
+      }
+    }
+    .about-us_direction {
+      display: flex;
+      justify-content: center;
+      gap: 0.5em;
+      margin-top: 1.5em;
+      .btn-direction {
+        padding: 0.8em 1.3em;
+        border-radius: 50%;
+        &.left {
+          border: 1px solid #e7e5ea;
+          i {
+            opacity: 0.6;
+          }
+        }
+        &.right {
+          box-shadow: 0px 20px 50px rgba(79, 119, 255, 0.2);
+        }
+      }
+    }
+  }
+  .about-us_startups {
+    .about-us_startups-title {
+      display: flex;
+      gap: 1em;
+      .about-us_startups-cross {
+        width: 4em;
+        height: 2px;
+        background-color: $colorGlobal;
+        margin-top: 1.1em;
+        border-radius: 1em;
+      }
+      .about-us_startups-text {
+        h3 {
+          font-size: 1.8em;
+          &:last-child {
+            background: linear-gradient(to right, #ffc0ec, #857fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+    }
+    .about-us_startups-box {
+      display: flex;
+      gap: 1em;
+      align-items: center;
+      h5 {
+        font-size: 1.2em;
+        @media only screen and (max-width: 992px) {
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+}

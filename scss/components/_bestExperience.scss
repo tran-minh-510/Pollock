@@ -1,0 +1,35 @@
+.best-experience {
+  text-align: center;
+  padding: 5em 0;
+  .best-experience-title {
+    h2 {
+      font-size: 3em;
+      span {
+        background: linear-gradient(to right, #ffc0ec, #857fff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    p {
+      font-weight: 300;
+      margin-top: 0.3em;
+    }
+  }
+  .best-experience-content {
+    padding-top: 4em;
+    .best-experience-content_box {
+      padding: 4em 0;
+      border-radius: 1.3em;
+      background-color: #f8fafc;
+      h4 {
+        font-size: 1.7em;
+        margin-top: 1em;
+        color: $colorGlobal;
+      }
+    }
+    h3 {
+      font-size: 1.7em;
+      margin-top: 1em;
+    }
+  }
+}
