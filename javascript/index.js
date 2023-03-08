@@ -29,16 +29,20 @@ const handleMenu = (element) => {
     if (element.classList.contains("appearMenu")) {
         element.classList.remove("appearMenu");
         element.classList.add("hiddenMenu");
-        overlay.style.display = "none";
+        overlay.classList.add("hiddenMenu");
+        overlay.classList.remove("appearMenu");
         setTimeout(() => {
+            overlay.style.display = "none";
             element.style.display = "none";
         }, 400);
     } else {
         element.classList.add("appearMenu");
         element.classList.remove("hiddenMenu");
-        element.style.display = "block";
         element.style.top = `${header.offsetHeight}px`;
+        element.style.display = "block";
         overlay.style.display = "block";
+        overlay.classList.remove("hiddenMenu");
+        overlay.classList.add("appearMenu");
     }
 };
 
