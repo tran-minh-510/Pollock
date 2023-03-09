@@ -63,3 +63,13 @@ ul {
 @import "./components/aboutUs";
 @import "./components/news";
 @import "./layouts/footer";
+
+.owl-carousel {
+  height: 25em;
+  @media (min-width: 576px) and (max-width: 992px) {
+    height: 18em;
+  }
+  @media (max-width: 576px) {
+    height: 15em;
+  }
+}

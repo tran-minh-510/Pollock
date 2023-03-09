@@ -114,6 +114,34 @@ ul {
   }
 }
 
+@keyframes appearAnswer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes hiddenAnswer {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.active {
+  height: 130px !important;
+}
+
+.appearAnswer {
+  animation: appearAnswer 1.5s ease;
+}
+
+.hiddenAnswer {
+  animation: hiddenAnswer 0.5s ease;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -683,11 +711,31 @@ header .header .header_options button:hover {
 .let-talk .let-talk_detail-box .let-talk_detail-box_list {
   padding-top: 1em;
 }
-.let-talk .let-talk_detail-box .let-talk_detail-box_list .let-talk_detail-box_list-detail {
+.let-talk .let-talk_detail-box .let-talk_detail-box_list .let-talk_detail-box_list-detail .let-talk_detail-box_list-detail_questions {
+  padding: 1em 0;
   display: flex;
   justify-content: space-between;
-  padding: 1.2em 0;
   border-bottom: 1px solid #e7e5ea;
+}
+.let-talk .let-talk_detail-box .let-talk_detail-box_list .let-talk_detail-box_list-detail .let-talk_detail-box_list-detail_questions .fa-solid {
+  transition: all 0.5s ease;
+}
+.let-talk .let-talk_detail-box .let-talk_detail-box_list .let-talk_detail-box_list-detail .let-talk_detail-box_list-detail_answer-wrapper {
+  position: relative;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.let-talk .let-talk_detail-box .let-talk_detail-box_list .let-talk_detail-box_list-detail .let-talk_detail-box_list-detail_answer-wrapper .let-talk_detail-box_list-detail_answer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 1em;
+  font-size: 0.9em;
 }
 .let-talk .let-talk_detail-box .let-talk_detail-box_list .let-talk_detail-box_list-detail h5 {
   font-size: 1.1em;
@@ -1100,6 +1148,20 @@ header .header .header_options button:hover {
 .footer .footer-social .footer-social_list .footer-social_list-btn:hover {
   color: #886cff;
   background-color: #fff;
+}
+
+.owl-carousel {
+  height: 25em;
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  .owl-carousel {
+    height: 18em;
+  }
+}
+@media (max-width: 576px) {
+  .owl-carousel {
+    height: 15em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
