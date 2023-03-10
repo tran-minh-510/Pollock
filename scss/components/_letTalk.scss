@@ -62,10 +62,32 @@
     .let-talk_detail-box_list {
       padding-top: 1em;
       .let-talk_detail-box_list-detail {
-        display: flex;
-        justify-content: space-between;
-        padding: 1.2em 0;
-        border-bottom: 1px solid #e7e5ea;
+        .let-talk_detail-box_list-detail_questions {
+          padding: 1em 0;
+          display: flex;
+          justify-content: space-between;
+          border-bottom: 1px solid #e7e5ea;
+          .fa-solid {
+            transition: all 0.5s ease;
+          }
+        }
+        .let-talk_detail-box_list-detail_answer-wrapper {
+          position: relative;
+          background-color: $colorWhite;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          height: 0;
+          overflow: hidden;
+          transition: all 0.5s ease;
+          .let-talk_detail-box_list-detail_answer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            padding: 1em;
+            font-size: 0.9em;
+          }
+        }
         h5 {
           font-size: 1.1em;
         }

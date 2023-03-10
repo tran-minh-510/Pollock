@@ -80,3 +80,80 @@ overlay.onclick = () => {
         }
     }
 };
+
+const textQuestons = document.querySelectorAll('.let-talk_detail-box_list-detail_questions');
+const textAnswerWrapper = document.querySelectorAll('.let-talk_detail-box_list-detail_answer-wrapper');
+// const textAnswer = document.querySelectorAll('.let-talk_detail-box_list-detail_answer');
+
+const iconQuestions = document.querySelectorAll('.let-talk_detail-box_list-detail_questions i');
+console.log(iconQuestions)
+
+
+textQuestons.forEach((element, index) => {
+    element.onclick = () => {
+        if (textAnswerWrapper[index].classList.contains('active')) {
+            textAnswerWrapper.forEach(btn => {
+                btn.classList.remove('active')
+                iconQuestions.forEach(icon => {
+                    icon.classList.add("fa-plus")
+                    icon.classList.remove("fa-minus")
+                })
+            })
+        } else {
+            textAnswerWrapper.forEach(btn => btn.classList.remove('active'))
+            textAnswerWrapper[index].classList.toggle('active')
+            iconQuestions.forEach(icon => {
+                icon.classList.add("fa-plus")
+                icon.classList.remove("fa-minus")
+            })
+            if (textAnswerWrapper[index].classList.contains("active")) {
+                textAnswerWrapper[index].classList.add("appearAnswer")
+                textAnswerWrapper[index].classList.remove("hiddenAnswer")
+                iconQuestions[index].classList.remove("fa-plus")
+                iconQuestions[index].classList.add("fa-minus")
+            } else {
+                textAnswerWrapper[index].classList.remove("appearAnswer")
+                textAnswerWrapper[index].classList.add("hiddenAnswer")
+                iconQuestions[index].classList.add("fa-plus")
+                iconQuestions[index].classList.remove("fa-minus")
+            }
+        }
+
+    }
+})
+
+
+$('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    responsiveClass: true,
+    touchDrag: false,
+    autoplay: true,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 1
+        },
+        1000: {
+            items: 1
+        }
+    }
+})
+
+var owl = $('.owl-carousel');
+owl.owlCarousel();
+// Go to the next item
+$('.btn-direction.left').click(function () {
+    owl.trigger('next.owl.carousel');
+})
+// Go to the previous item
+$('.btn-direction.right').click(function () {
+    // With optional speed parameter
+    // Parameters has to be in square bracket '[]'
+    owl.trigger('prev.owl.carousel', [300]);
+})
+
+

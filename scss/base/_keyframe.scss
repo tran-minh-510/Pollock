@@ -67,3 +67,37 @@
     transition: all 1s ease-in-out;
   }
 }
+
+@keyframes appearAnswer {
+  from {
+    opacity: 0;
+    // transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    // transform: translateY(0);
+  }
+}
+
+@keyframes hiddenAnswer {
+  from {
+    opacity: 1;
+    // transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    // transform: translateY(-20px);
+  }
+}
+
+.active {
+  height: 130px !important;
+}
+
+.appearAnswer {
+  animation: appearAnswer 1.5s ease;
+}
+
+.hiddenAnswer {
+  animation: hiddenAnswer 0.5s ease;
+}
